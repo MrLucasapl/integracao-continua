@@ -8,4 +8,3 @@ const soma = (a: number, b: number) => {
 };
 
 export { main, soma };
-
