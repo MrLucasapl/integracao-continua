@@ -1,0 +1,28 @@
+{
+  "name": "integracao-continua",
+  "version": "1.0.0",
+  "description": "aplicando integração contínua",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest --coverage",
+    "build": "tsc"
+  },
+  "author": "Lucas Pereira",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.4",
+    "@babel/preset-typescript": "^7.24.7",
+    "@jest/globals": "^29.7.0",
+    "@types/jest": "^29.5.13",
+    "@types/mocha": "^10.0.8",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "integracao-continua": "file:"
+  }
+}
