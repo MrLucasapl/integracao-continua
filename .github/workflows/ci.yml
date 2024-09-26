@@ -25,12 +25,19 @@ jobs:
 
         with:
           node-version: 20.11.1
+          # node-version: ${{ matrix.node-version }} # only if strategy is being used
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build and push
         id: docker_build
         uses: docker/build-push-action@v6
         with:
-          push: false # push to dockerhub 
+          push: true # push to dockerhub 
           tags: mrlucasapl/integracao-continua:latest # arrow the image name 
 
       ##- name: install project dependencies
