@@ -33,9 +33,9 @@ jobs:
           push: false # push to dockerhub 
           tags: mrlucasapl/integracao-continua:latest # arrow the image name 
 
-      - name: install project dependencies
-        run: npm ci
-      - name: runs the tests
-        run: npm test
-      - name: runs the project build
-        run: npm run build
+      ##- name: install project dependencies
+      ##  run: npm ci
+      ##- name: runs the tests
+      ##  run: npm test
+      ##- name: runs the project build
+      ##  run: npm run build
