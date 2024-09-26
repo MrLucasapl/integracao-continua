@@ -26,6 +26,13 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
+      - name: Build and push
+        id: docker_build
+        uses: docker/build-push-action@v6
+        with:
+          push: false # push to dockerhub 
+          tags: mrlucasapl/integracao-continua:latest # arrow the image name 
+
       - name: install project dependencies
         run: npm ci
       - name: runs the tests
