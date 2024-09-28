@@ -10,7 +10,6 @@ WORKDIR /home/nonroot/server
 RUN mkdir -p /home/nonroot/server
 
 COPY ./.github ./.github
-COPY ./.scannerwork ./.scannerwork
 COPY ./.gitignore .
 COPY ./src ./src
 COPY ./babel.config.js .
