@@ -38,7 +38,13 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true # push to dockerhub 
-          tags: mrlucasapl/integracao-continua:latest # arrow the image name 
+          tags: mrlucasapl/integracao-continua:latest # arrow the image name
+
+      - name: SonarQube Scan 2
+        uses: sonarsource/sonarqube-scan-action@master
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
 
       ##- name: install project dependencies
       ##  run: npm ci
