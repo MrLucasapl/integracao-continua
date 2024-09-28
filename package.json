@@ -24,6 +24,7 @@
     "typescript": "^5.6.2"
   },
   "dependencies": {
-    "integracao-continua": "file:"
+    "integracao-continua": "file:",
+    "sonar-scanner": "^3.1.0"
   }
 }
